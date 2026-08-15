@@ -1,0 +1,99 @@
+{
+    "position": "top", 
+    "height": 30,
+    "margin-top": 5,
+    "margin-right": 5,
+    "margin-left": 5,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["mpris"],
+    "modules-right": ["clock", "network", "group/audio", "custom/power"],
+    // Modules configuration
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{}",
+    "cursor": true,
+	 	"persistent_workspaces": {
+	 		"1": [],
+	 		"2": [],
+	 		"3": [],
+	 		"4": [],
+	 		"5": [],
+	 		"6": [],
+	 		"7": [],
+	 		"8": [],
+	 		"9": [],
+	 		"10": []
+	},
+         	"format-icons": {
+             		"1": "󰋜",
+             		"2": "󰖟",
+             		"3": "󰊴",
+             		"4": "󰭹",
+             		"5": "󱓷",
+             		"6": "󱇧",
+             		"7": "󰊢",
+             		"8": "󰖲",
+             		"9": "󰕧",
+             		"10": "󰝚"
+         }
+     },
+	"clock": {
+		"format": "󰅐 {:%H:%M}",
+        	"tooltip-format": "<big>{:%a, %b %d}</big>\n",
+    "cursor": 92
+	},
+	"network": {
+        	"format-wifi": "  {signalStrength}",
+        	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "󰤮 Disconnected",
+        	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	},
+"mpris": {
+	"format": "{player_icon} {dynamic}",
+	"format-paused": "{status_icon} <i>{dynamic}</i>",
+  "max-length": 25,
+	"player-icons": {
+		"default": "",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": ""
+	},
+	 "ignored-players": ["google-chrome-stable"]
+},
+  "group/audio": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "drawer-child"
+    },
+    "modules": [ "pulseaudio", "pulseaudio/slider" ] 
+  },
+	"pulseaudio": {
+		"format": "{icon}  {volume}%",
+        	"format-muted": "󰖁 Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+    "on-click": "pkill -x pavucontrol || pavucontrol"
+    },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+    "cursor": true,
+},
+  "custom/power": {
+    "format": "󰐥",
+    "on-click": "~/.config/waybar/scripts/power.sh",
+    "cursor": true,
+  },
+}

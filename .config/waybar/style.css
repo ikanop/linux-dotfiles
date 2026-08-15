@@ -1,0 +1,82 @@
+* {
+    all: unset;
+    font-family: mononoki Nerd Font;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+#workspaces {
+	border-radius: 5px;
+}
+#workspaces button {
+	background-color: #1a1b26;
+  padding: 0px 15px;
+  margin-right: 5px;
+  color: #c0caf5;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  color: #1a1b26;
+  background-color: #7aa2f7;
+}
+
+#workspaces button:hover {
+	background-color: #7dcfff;
+	color: #1a1b26;
+}
+
+#clock {
+  color: #bb9af7;
+  border-radius: 5px 0 0 5px;
+}
+
+tooltip {
+  background-color: #1a1b26;
+  border-radius: 5px;
+}
+
+tooltip label {
+  color: #bb9af7;
+}
+
+#mpris, #clock, #custom-power, #pulseaudio, #group_audio, #pulseaudio-slider, #network {
+	background-color: #1a1b26;
+	padding: 8px 10px;
+}
+
+#mpris {
+  color: #c0caf5;
+  border-radius: 5px;
+}
+
+#network {
+	color: #7dcfff;
+}
+
+#custom-power {
+  border-radius: 0px 5px 5px 0px;
+  color: #f7768e;
+}
+
+#pulseaudio {
+	color: #e0af68;
+}
+
+#pulseaudio-slider trough {
+  background-color: black;
+  min-width: 60px;
+  min-height: 10px;
+  border-radius: 9999px;
+}
+
+#pulseaudio-slider highlight {
+  background-color: #e0af68;
+  border-radius: 9999px;
+}

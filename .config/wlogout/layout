@@ -1,0 +1,27 @@
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "",
+    "keybind" : "s",
+    "height" : 1,
+    "width" : 1,
+    "circular" : true
+}
+{
+    "label" : "logout",
+    "action" : "loginctl terminate-user $USER",
+    "text" : "",
+    "keybind" : "e",
+    "height" : 1,
+    "width" : 1,
+    "circular" : true
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "",
+    "keybind" : "r",
+    "height" : 1,
+    "width" : 1,
+    "circular" : true
+}
