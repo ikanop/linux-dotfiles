@@ -5,7 +5,7 @@
     "margin-right": 5,
     "margin-left": 5,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["mpris"],
+    "modules-center": ["custom/mpris-prev", "mpris", "custom/mpris-next"],
     "modules-right": ["clock", "network", "group/audio", "custom/power"],
     // Modules configuration
 	"hyprland/workspaces": {
@@ -40,7 +40,7 @@
      },
 	"clock": {
 		"format": "󰅐 {:%H:%M}",
-        	"tooltip-format": "<big>{:%a, %b %d}</big>\n",
+        	"tooltip-format": "<big>{:%a, %d %b}</big>\n",
     "cursor": 92
 	},
 	"network": {
@@ -54,15 +54,26 @@
 	"format": "{player_icon} {dynamic}",
 	"format-paused": "{status_icon} <i>{dynamic}</i>",
   "max-length": 25,
+  "on-click": "playerctl play-pause",
 	"player-icons": {
-		"default": "",
+		"default": "",
 		"mpv": "🎵"
 	},
 	"status-icons": {
-		"paused": ""
+		"paused": ""
 	},
 	 "ignored-players": ["google-chrome-stable"]
 },
+"custom/mpris-next": {
+    "format": "󰒭",
+    "on-click": "playerctl next",
+    "tooltip": false
+  },
+"custom/mpris-prev": {
+    "format": "󰒮",
+    "on-click": "playerctl previous",
+    "tooltip": false
+  },
   "group/audio": {
     "orientation": "horizontal",
     "drawer": {

@@ -1,4 +1,5 @@
 awww
+bat
 btop
 cava
 cliphist
@@ -27,7 +28,6 @@ rofi
 sassc
 sddm
 slurp
-steam
 stow
 tree
 udiskie

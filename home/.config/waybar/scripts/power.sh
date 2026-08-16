@@ -1,2 +1,2 @@
 #! /bin/sh
-wlogout -b 3
+wlogout -p layer-shell -b 3

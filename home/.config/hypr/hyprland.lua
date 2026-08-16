@@ -53,10 +53,10 @@ local menu = "rofi -show drun"
 --
 hl.on("hyprland.start", function()
 	hl.exec_cmd(terminal)
-	hl.exec_cmd("mako")
 	hl.exec_cmd("awww-daemon && sleep 0.5 && awww restore")
 	--hl.exec_cmd("nm-applet")
 	hl.exec_cmd("waybar")
+	hl.exec_cmd(browser)
 end)
 
 -------------------------------
@@ -65,6 +65,7 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
+hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 

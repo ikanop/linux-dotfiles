@@ -10,6 +10,11 @@ window#waybar {
     color: white;
 }
 
+#custom-mpris-prev, #custom-mpris-next, #mpris, #clock, #custom-power, #pulseaudio, #group_audio, #pulseaudio-slider, #network {
+	background-color: #1a1b26;
+	padding: 8px 10px;
+}
+
 #workspaces {
 	border-radius: 5px;
 }
@@ -27,14 +32,10 @@ window#waybar {
   background-color: #7aa2f7;
 }
 
-#workspaces button:hover {
-	background-color: #7dcfff;
-	color: #1a1b26;
-}
-
 #clock {
   color: #bb9af7;
   border-radius: 5px 0 0 5px;
+  padding-left: 15px;
 }
 
 tooltip {
@@ -46,14 +47,21 @@ tooltip label {
   color: #bb9af7;
 }
 
-#mpris, #clock, #custom-power, #pulseaudio, #group_audio, #pulseaudio-slider, #network {
-	background-color: #1a1b26;
-	padding: 8px 10px;
+#mpris, #custom-mpris-prev, #custom-mpris-next {
+  color: #c0caf5;
 }
 
-#mpris {
-  color: #c0caf5;
-  border-radius: 5px;
+#mpris:hover, #custom-mpris-prev:hover, #custom-mpris-next:hover {
+  color: #7aa2f7;
+  transition: color 0.3s ease-in-out;
+}
+
+#custom-mpris-prev {
+  border-radius: 5px 0 0 5px;
+}
+
+#custom-mpris-next {
+  border-radius: 0 5px 5px 0;
 }
 
 #network {
@@ -63,6 +71,7 @@ tooltip label {
 #custom-power {
   border-radius: 0px 5px 5px 0px;
   color: #f7768e;
+  padding-right: 15px
 }
 
 #pulseaudio {
