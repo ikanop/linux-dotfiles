@@ -1,6 +1,6 @@
 # Dotfiles
 
-![Preview](./assets/Preview.png)
+![Preview](./assets/preview.png)
 
 ![Preview Rofi](./assets/preview-rofi.png)
 
