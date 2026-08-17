@@ -344,17 +344,17 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 hl.bind(
 	mainMod .. " + SHIFT + S",
 	hl.dsp.exec_cmd(
-		'grim -g "$(slurp)" - | tee ~/Pictures/screenshots/region/screenshot_$(date +%d-%m-%Y_%T) | wl-copy'
+		'grim -g "$(slurp)" - | tee ~/Pictures/screenshots/region/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy'
 	)
 )
 hl.bind(
 	mainMod .. " + S",
-	hl.dsp.exec_cmd("grim - | tee ~/Pictures/screenshots/all-monitors/screenshot_$(date +%d-%m-%Y_%T) | wl-copy")
+	hl.dsp.exec_cmd("grim - | tee ~/Pictures/screenshots/all-monitors/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy")
 )
 hl.bind(
 	mainMod .. " + ALT + S",
 	hl.dsp.exec_cmd(
-		"grim -o $(hyprctl activeworkspace -j | jq -r '.monitor') - | tee ~/Pictures/screenshots/current-monitor/screenshot_$(date +%d-%m-%Y_%T) | wl-copy"
+		"grim -o $(hyprctl activeworkspace -j | jq -r '.monitor') - | tee ~/Pictures/screenshots/current-monitor/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy"
 	)
 )
 
