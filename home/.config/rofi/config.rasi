@@ -13,7 +13,7 @@ configuration {
 @theme "tokyo"
 
 * {
-    font: "Iosevka Nerd Font 12";
+    font: "Maple Mono NF 12";
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -27,11 +27,11 @@ window {
     location:       center;
     width:          480;
     y-offset:       -20;
-    border-radius:  24px;
+    border-radius:  10px;
 
     border: 1px;
     border-color: @bg3;
-    background-color:   @bg0;
+    background-color:   @bg0-transparent;
 }
 
 mainbox {
@@ -41,8 +41,8 @@ mainbox {
 inputbar {
     background-color:   @bg1;
     border-color:       @bg3;
-    border-radius:  16px;
-    border:         2px;
+    border-radius:  10px;
+//    border:         2px;
 
     padding:    8px 16px;
     spacing:    8px;
@@ -55,12 +55,12 @@ prompt {
 
 entry {
     placeholder:        "Search";
-    placeholder-color:  @cyan;
+    placeholder-color:  @fg3;
 }
 
 message {
     margin:             12px 0 0;
-    border-radius:      16px;
+    border-radius:      10px;
     border-color:       @bg2;
     background-color:   @bg2;
 }
@@ -73,16 +73,17 @@ textbox {
 listview {
     background-color:   transparent;
     margin:     12px 0 0;
-    columns:    1;
+    columns:    4;
     lines:      2;
 
     fixed-height: false;
 }
 
 element {
+    orientation: vertical;
     padding:        8px 16px;
     spacing:        8px;
-    border-radius:  16px;
+    border-radius:  10px;
 }
 
 element normal urgent {
@@ -98,7 +99,7 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:           1em;
+    size:           2.5em;
     vertical-align: 0.5;
 }
 

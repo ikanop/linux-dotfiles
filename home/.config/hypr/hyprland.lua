@@ -341,8 +341,22 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Screenshot
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("grim -c - | wl-copy"))
+hl.bind(
+	mainMod .. " + SHIFT + S",
+	hl.dsp.exec_cmd(
+		'grim -g "$(slurp)" - | tee ~/Pictures/screenshots/region/screenshot_$(date +%d-%m-%Y_%T) | wl-copy'
+	)
+)
+hl.bind(
+	mainMod .. " + S",
+	hl.dsp.exec_cmd("grim - | tee ~/Pictures/screenshots/all-monitors/screenshot_$(date +%d-%m-%Y_%T) | wl-copy")
+)
+hl.bind(
+	mainMod .. " + ALT + S",
+	hl.dsp.exec_cmd(
+		"grim -o $(hyprctl activeworkspace -j | jq -r '.monitor') - | tee ~/Pictures/screenshots/current-monitor/screenshot_$(date +%d-%m-%Y_%T) | wl-copy"
+	)
+)
 
 -- fullscreen
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ "fullscreen", "toggle" }))
@@ -387,6 +401,11 @@ hl.window_rule({
 })
 
 -- Layer rules also return a handle.
+hl.layer_rule({
+	match = { namespace = "rofi" },
+	blur = true,
+	ignore_alpha = 0.1,
+})
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
 --     match = { namespace = "^my-overlay$" },
