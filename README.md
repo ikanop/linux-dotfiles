@@ -1,5 +1,11 @@
 # Dotfiles
 
+![Preview](./assets/Preview.png)
+
+![Preview Rofi](./assets/preview-rofi.png)
+
+![Preview Terminal](./assets/preview-terminal.png)
+
 ### 1. Clone the repo
 
 ```bash
