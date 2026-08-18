@@ -29,8 +29,8 @@ window {
     y-offset:       -20;
     border-radius:  10px;
 
-    border: 1px;
-    border-color: @bg3;
+    border: 2px;
+    border-color: @blue;
     background-color:   @bg0-transparent;
 }
 
@@ -75,6 +75,8 @@ listview {
     margin:     12px 0 0;
     columns:    4;
     lines:      2;
+    fixed-columns: true;
+    cycle: true;
 
     fixed-height: false;
 }

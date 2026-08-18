@@ -4,7 +4,7 @@
     "margin-top": 5,
     "margin-right": 5,
     "margin-left": 5,
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/logo", "hyprland/workspaces"],
     "modules-center": ["custom/mpris-prev", "mpris", "custom/mpris-next"],
     "modules-right": ["clock", "network", "group/audio", "custom/power"],
     // Modules configuration
