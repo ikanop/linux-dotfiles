@@ -8,6 +8,10 @@ border-color=#bb9af7
 border-radius=10
 default-timeout=10000
 group-by=summary
+on-notify=exec pw-play /usr/share/sounds/freedesktop/stereo/message.oga
 
 [grouped]
 format=(%g) <b>%s</b>\n%b
+
+[app-name=vesktop]
+on-notify=none
