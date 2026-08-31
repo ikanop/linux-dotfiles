@@ -1,0 +1,17 @@
+local vars = require("vars")
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd(vars.terminal)
+	hl.exec_cmd("awww-daemon && sleep 0.5 && awww restore")
+	--hl.exec_cmd("nm-applet")
+	hl.exec_cmd("waybar")
+	hl.exec_cmd(vars.browser)
+	hl.exec_cmd("vesktop")
+	hl.exec_cmd("spotify-launcher")
+end)
+
+hl.window_rule({ match = { class = vars.terminal .. "|" }, workspace = "1" })
+hl.window_rule({ match = { class = "^brave-browser$" }, workspace = "2 silent" })
+hl.window_rule({ match = { class = "^steam|org.prismlauncher.PrismLauncher$" }, workspace = "3" })
+hl.window_rule({ match = { class = "^(Minecraft.*|steam_app_.*)$" }, workspace = "4" })
+hl.window_rule({ match = { class = "^(vesktop|Spotify)$" }, workspace = "5 silent" })
