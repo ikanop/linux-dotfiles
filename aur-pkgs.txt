@@ -1,7 +1,0 @@
-bibata-cursor-theme-bin
-google-chrome
-maplemono-nf-unhinted
-tty-clock
-vesktop-bin
-waypaper
-wlogout

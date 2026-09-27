@@ -1,3 +1,5 @@
+local vars = require("vars")
+
 local suppressMaximizeRule = hl.window_rule({
 	-- Ignore maximize requests from all apps. You'll probably like this.
 	name = "suppress-maximize-events",
@@ -55,6 +57,16 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "satty",
+	match = {
+		class = "com.gabm.satty",
+	},
+	float = true,
+	center = true,
+	pin = true,
+})
+
+hl.window_rule({
 	name = "pavucontrol",
 	match = {
 		class = "org.pulseaudio.pavucontrol",
@@ -62,3 +74,14 @@ hl.window_rule({
 	float = true,
 	move = { "monitor_w - window_w - 7", "48" },
 })
+
+hl.window_rule({ match = { class = vars.terminal .. "|" }, workspace = "1" })
+hl.window_rule({ match = { class = "^brave-browser$" }, workspace = "2 silent" })
+hl.window_rule({ match = { class = "^steam|org.prismlauncher.PrismLauncher$" }, workspace = "3" })
+hl.window_rule({
+	match = { class = "(?i)(.*minecraft.*|.*x86_64.*|.*vulkan.*|.*64bit.*|steam_app_.*)" },
+	workspace = "4",
+})
+hl.window_rule({ match = { class = "^(vesktop|Spotify)$" }, workspace = "5 silent" })
+hl.window_rule({ match = { class = "^(org.jellyfin.JellyfinDesktop$)" }, workspace = "6" })
+hl.window_rule({ match = { class = "^(com.stremio.Stremio$)" }, workspace = "6" })

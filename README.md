@@ -13,12 +13,13 @@ git clone https://github.com/ikanop/linux-dotfiles ~/dotfiles
 cd ~/dotfiles
 ```
 
-### 2. Install packages
+### 2. Stow home configs
 
 ```bash
-sudo pacman -S --needed - < pacman-pkgs.txt
+stow home
 ```
 
+```
 ### 3. Install yay
 
 ```bash
@@ -30,26 +31,18 @@ cd ..
 rm -rf yay
 ```
 
-### 4. Install AUR packages
+### 4. Install theming packages (icons, cursor, font)
 
-```bash
-yay -S --needed - < aur-pkgs.txt
+```
+pacman -Syu nwg-look papirus-icon-theme
+yay -Syu bibata-cursor-theme-bin maplemono-nf-unhinted
+```
+```
 ```
 
-### 5. Stow home configs
+### 5. Apply the themes
 
-```bash
-stow home
-```
-
-### 6. Stow system configs
-
-```bash
-sudo stow -t / keyd
-```
-
-### 7. Enable services
-
-```bash
-sudo systemctl enable --now keyd
-```
+Open `nwg-look`, then set:
+- **GTK theme** -> Tokyonight-Dark
+- **Icon theme** -> Papirus
+- **Cursor theme** -> Bibata-Modern-Ice

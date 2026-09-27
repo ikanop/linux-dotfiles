@@ -87,7 +87,7 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 hl.bind(
 	mainMod .. " + SHIFT + S",
 	hl.dsp.exec_cmd(
-		'grim -g "$(slurp)" - | tee ~/Pictures/screenshots/region/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy'
+		'grim -g "$(slurp)" - | satty -f - -o ~/Pictures/screenshots/region/screenshot_$(date +%d-%m-%Y_%T).png'
 	)
 )
 hl.bind(
