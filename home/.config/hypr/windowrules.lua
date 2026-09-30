@@ -54,6 +54,7 @@ hl.window_rule({
 	float = true,
 	center = true,
 	pin = true,
+	stay_focused = true,
 })
 
 hl.window_rule({
@@ -64,6 +65,7 @@ hl.window_rule({
 	float = true,
 	center = true,
 	pin = true,
+	stay_focused = true,
 })
 
 hl.window_rule({

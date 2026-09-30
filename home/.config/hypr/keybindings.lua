@@ -84,20 +84,15 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Screenshot
-hl.bind(
-	mainMod .. " + SHIFT + S",
-	hl.dsp.exec_cmd(
-		'grim -g "$(slurp)" - | satty -f - -o ~/Pictures/screenshots/region/screenshot_$(date +%d-%m-%Y_%T).png'
-	)
-)
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("~/.config/hypr/scripts/region.sh"))
 hl.bind(
 	mainMod .. " + S",
-	hl.dsp.exec_cmd("grim - | tee ~/Pictures/screenshots/all-monitors/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy")
+	hl.dsp.exec_cmd("grim - | tee ~/Pictures/Screenshots/all/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy")
 )
 hl.bind(
 	mainMod .. " + ALT + S",
 	hl.dsp.exec_cmd(
-		"grim -o $(hyprctl activeworkspace -j | jq -r '.monitor') - | tee ~/Pictures/screenshots/current-monitor/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy"
+		"grim -o $(hyprctl activeworkspace -j | jq -r '.monitor') - | tee ~/Pictures/Screenshots/focused/screenshot_$(date +%d-%m-%Y_%T).png | wl-copy"
 	)
 )
 

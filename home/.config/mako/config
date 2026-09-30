@@ -1,4 +1,5 @@
-margin=15,15,0,0
+margin=0
+outer-margin=15
 font=Maple Mono NF 10
 background-color=#24283b
 text-color=#c0caf5
@@ -8,6 +9,7 @@ border-color=#bb9af7
 border-radius=10
 default-timeout=10000
 group-by=summary
+anchor=bottom-right
 on-notify=exec pw-play /usr/share/sounds/freedesktop/stereo/message.oga
 
 [grouped]
