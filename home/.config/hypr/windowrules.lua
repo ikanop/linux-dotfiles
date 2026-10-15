@@ -78,12 +78,12 @@ hl.window_rule({
 })
 
 hl.window_rule({ match = { class = vars.terminal .. "|" }, workspace = "1" })
-hl.window_rule({ match = { class = "^brave-browser$" }, workspace = "2 silent" })
+hl.window_rule({ match = { class = "^brave-browser$" }, focus_on_activate = true, workspace = "2 silent" })
 hl.window_rule({ match = { class = "^steam|org.prismlauncher.PrismLauncher$" }, workspace = "3" })
 hl.window_rule({
 	match = { class = "(?i)(.*minecraft.*|.*x86_64.*|.*vulkan.*|.*64bit.*|steam_app_.*)" },
 	workspace = "4",
 })
-hl.window_rule({ match = { class = "^(vesktop|Spotify)$" }, workspace = "5 silent" })
+hl.window_rule({ match = { class = "^(vesktop|Spotify)$" }, focus_on_activate = true, workspace = "5 silent" })
 hl.window_rule({ match = { class = "^(org.jellyfin.JellyfinDesktop$)" }, workspace = "6" })
 hl.window_rule({ match = { class = "^(com.stremio.Stremio$)" }, workspace = "6" })
