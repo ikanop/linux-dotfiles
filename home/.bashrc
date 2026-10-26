@@ -27,3 +27,5 @@ alias lt='eza --tree --level=2 --group-directories-first --icons=auto --color=au
 alias l.='eza -a --oneline --color=never | grep -E "^\."'
 
 export SUDO_EDITOR="nvim"
+
+export PATH=$PATH:/home/ikanop/.spicetify
