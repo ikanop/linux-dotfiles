@@ -77,6 +77,22 @@ hl.window_rule({
 	move = { "monitor_w - window_w - 7", "48" },
 })
 
+hl.window_rule({
+	name = "dolphin-opacity",
+	match = {
+		class = "org.kde.dolphin",
+	},
+	opacity = "0.85 0.85",
+})
+
+hl.window_rule({
+	name = "bluetui-popup",
+	match = { class = "bluetui" },
+	float = true,
+	size = { 420, 360 },
+	move = { "monitor_w - window_w - 7", 48 },
+})
+
 hl.window_rule({ match = { class = vars.terminal .. "|" }, workspace = "1" })
 hl.window_rule({ match = { class = "^brave-browser$" }, focus_on_activate = true, workspace = "2 silent" })
 hl.window_rule({ match = { class = "^steam|org.prismlauncher.PrismLauncher$" }, workspace = "3" })

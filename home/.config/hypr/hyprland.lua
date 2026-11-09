@@ -9,3 +9,9 @@ require("misc")
 require("input")
 require("keybindings")
 require("windowrules")
+
+hl.config({
+	render = {
+		cm_auto_hdr = 0,
+	},
+})

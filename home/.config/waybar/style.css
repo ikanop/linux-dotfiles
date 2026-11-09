@@ -10,9 +10,14 @@ window#waybar {
     color: white;
 }
 
-#custom-mpris-prev, #custom-mpris-next, #mpris, #clock, #custom-power, #pulseaudio, #group_audio, #pulseaudio-slider, #network {
+.module {
 	background-color: #1a1b26;
 	padding: 8px 10px;
+}
+
+#workspaces {
+  background: transparent;
+  padding: 0;
 }
 
 #workspaces button {
@@ -29,10 +34,13 @@ window#waybar {
   background-color: #7aa2f7;
 }
 
+#clock.date {
+  color: #7dcfff;
+
+}
+
 #clock {
   color: #bb9af7;
-  border-radius: 10px 0 0 10px;
-  padding-left: 15px;
 }
 
 tooltip {
@@ -62,7 +70,9 @@ tooltip label {
 }
 
 #network {
-	color: #7dcfff;
+	color: #f7768e;
+  border-radius: 10px 0 0 10px;
+  padding-left: 15px;
 }
 
 #custom-power {
@@ -73,6 +83,10 @@ tooltip label {
 
 #pulseaudio {
 	color: #e0af68;
+}
+
+#pulseaudio-slider {
+  padding: 0px;
 }
 
 #pulseaudio-slider trough {

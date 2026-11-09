@@ -25,9 +25,13 @@ hl.config({
 		},
 		blur = {
 			enabled = true,
-			size = 5,
-			passes = 3,
+			size = 3,
+			passes = 2,
 			vibrancy = 0.1696,
+			variant = "drops",
+		},
+		wobble = {
+			enabled = true,
 		},
 	},
 	animations = {

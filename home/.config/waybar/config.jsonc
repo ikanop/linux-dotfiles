@@ -4,9 +4,9 @@
     "margin-top": 5,
     "margin-right": 5,
     "margin-left": 5,
-    "modules-left": ["custom/logo", "hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/mpris-prev", "mpris", "custom/mpris-next"],
-    "modules-right": ["clock", "network", "group/audio", "custom/power"],
+    "modules-right": ["network", "bluetooth", "group/audio", "clock#date", "clock", "custom/power"],
     // Modules configuration
 	"hyprland/workspaces": {
 		"disable-scroll": true,
@@ -38,10 +38,13 @@
              		"10": "󰝚"
          }
      },
+  "clock#date": {
+    "format": "󰸗 {:%a %d}",
+    "tooltip": false,
+  },
 	"clock": {
 		"format": "󰅐 {:%H:%M}",
-        	"tooltip-format": "<big>{:%a, %d %b}</big>\n",
-    "cursor": 92
+    "tooltip": false,
 	},
 	"network": {
         	"format-wifi": "  {signalStrength}",
@@ -55,10 +58,11 @@
   "interval": 1,
 	"format-paused": "{status_icon} <i>{title} - {artist} ({position}/{length})</i>",
   "max-length": 100,
+  "tooltip": false,
   "on-click": "playerctl play-pause",
 	"player-icons": {
 		"default": "",
-		"mpv": "🎵"
+		"mpv": "🎵",
 	},
 	"status-icons": {
 		"paused": ""
@@ -79,6 +83,7 @@
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 300,
+    "transition-left-to-right": false,
       "children-class": "drawer-child"
     },
     "modules": [ "pulseaudio", "pulseaudio/slider" ] 
@@ -108,4 +113,10 @@
     "on-click": "~/.config/waybar/scripts/power.sh",
     "cursor": true,
   },
+"bluetooth": {
+    "format": "󰂯 {status}",
+    "format-connected": "󰂯 {device_alias}",
+    "format-connected-battery": "󰂯 {device_alias} {device_battery_percentage}%",
+    "on-click": "pkill -x bluetui || kitty --class bluetui -e bluetui"
+}
 }
