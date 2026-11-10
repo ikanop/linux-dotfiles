@@ -75,10 +75,24 @@ tooltip label {
   padding-left: 15px;
 }
 
+#bluetooth {
+  color: #ff9e64;
+}
+
+#custom-windows {
+  color: #9ece6a;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 20px;
+}
+
 #custom-power {
   border-radius: 0px 10px 10px 0px;
   color: #f7768e;
-  padding-right: 15px
+  padding-right: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 20px;
 }
 
 #pulseaudio {

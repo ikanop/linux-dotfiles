@@ -6,7 +6,7 @@
     "margin-left": 5,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/mpris-prev", "mpris", "custom/mpris-next"],
-    "modules-right": ["network", "bluetooth", "group/audio", "clock#date", "clock", "custom/power"],
+    "modules-right": ["network", "bluetooth", "group/audio", "clock#date", "clock", "custom/windows","custom/power"],
     // Modules configuration
 	"hyprland/workspaces": {
 		"disable-scroll": true,
@@ -107,6 +107,11 @@
     "max": 100,
     "orientation": "horizontal",
     "cursor": true,
+},
+  "custom/windows": {
+    "format": "",
+    "tooltip": "Reboot to Windows (one-time)",
+    "on-click": "sudo grub-reboot 'Windows Boot Manager (EFI BootNext)' && sudo reboot"
 },
   "custom/power": {
     "format": "󰐥",

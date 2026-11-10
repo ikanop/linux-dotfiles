@@ -1,0 +1,9 @@
+bibata-cursor-theme-bin
+brave-bin
+grimblast-git
+maplemono-nf-unhinted
+vesktop
+waypaper
+wlogout
+yay
+yay-debug

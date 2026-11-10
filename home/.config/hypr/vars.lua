@@ -1,6 +1,6 @@
 local M = {}
 
-M.monitor1 = "DP-6"
+M.monitor1 = "DP-5"
 M.monitor2 = "HDMI-A-2"
 
 M.terminal = "kitty"
